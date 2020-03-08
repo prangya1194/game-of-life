@@ -3,7 +3,7 @@ job('amazon-compile1') {
         git('https://github.com/asish029/game-of-life.git')
     }
     triggers {
-        scm('* * * * *')
+        scm('0 * * * *')
     }
     steps {
         maven('-e clean test')
