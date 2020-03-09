@@ -7,5 +7,5 @@ job('amazon-test') {
         maven('-e clean package')
     }
     postBuildSteps('SUCCESS') {
-    }    shell("curl --upload-file **/*.war "http://admin:admin@localhost:8080/manager/deploy?path=/debug&update=true"")
+    }    shell("curl --upload-file **/*.war "http://admin:admin@localhost:8080/manager/deploy?path=/debug&update=true")
 }
