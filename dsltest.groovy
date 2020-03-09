@@ -7,6 +7,6 @@ job('amazon-test') {
         maven('-e clean package')
     }
     steps {
-       shell("url -v -u admin:admin -T **/*.war 'http://127.0.1.1:8080/manager/text/deploy?path=/gameoflife&update=true'")
+       shell("curl -v -u admin:admin -T **/*.war 'http://127.0.1.1:8080/manager/text/deploy?path=/gameoflife&update=true'")
     }
 }
